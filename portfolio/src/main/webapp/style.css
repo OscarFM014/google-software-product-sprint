@@ -41,6 +41,113 @@ html, body{
 }
 
 /* Top menu */
+.navbar{
+  overflow: hidden;
+  background-color: rgb(27, 27, 27);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  display: block;
+  float: left;
+  padding: 14px 16px;
+  color: white;
+  outline-style: none;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #ffd900c5;
+  color: black;
+}
+
+.social_container{
+  align-items: flex-end;
+}
+
+.social_container a img{
+  height: 24px;
+  width: auto;
+  float: right;
+}
+
+
+
+/* About me*/
+
+.about_me_container > .about_me_first_section{ 
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 0px 15px 5px -15px rgb(0, 0, 0); 
+  height: 50vh;
+}
+
+
+.about_me_container > .about_me_first_section > img{
+  height:40vh;
+  margin: 10px;
+  width: auto;
+  float: right;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+.about_me_container > .about_me_first_section > h1{
+  color: black;
+  font-weight: normal;
+  margin: 10px;
+  padding: 5px;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.about_me_container > .about_me_first_section > h2{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.about_me_container > .about_me_first_section > h3{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 40px;
+}
+
+.about_me_container > .part_container > h1{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.about_me_container > .part_container > h2{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 2em;
+  font-weight: 300;
+}
+.about_me_container > .part_container > h3{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 40px;
+}
 
 .chart-wrap {
   width: 650px;
