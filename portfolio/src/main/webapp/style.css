@@ -47,6 +47,7 @@ html, body{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar a {
@@ -76,6 +77,11 @@ html, body{
 
 
 /* About me*/
+.about_me_container{
+  padding: 10px;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0); 
+}
+
 
 .about_me_container > .about_me_first_section{ 
   width: fit-content;
@@ -122,7 +128,8 @@ html, body{
   line-height: 40px;
 }
 
-.about_me_container > .part_container > h1{
+.about_me_container > .part_container h1{
+  text-align: center;
   color: black;
   font-weight: normal;
   margin: 20px;
@@ -131,7 +138,7 @@ html, body{
   font-weight: normal;
 }
 
-.about_me_container > .part_container > h2{
+.about_me_container > .part_container  h2{
   color: black;
   font-weight: normal;
   margin: 20px;
@@ -139,7 +146,66 @@ html, body{
   font-size: 2em;
   font-weight: 300;
 }
-.about_me_container > .part_container > h3{
+
+.me_as{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.me_as ul{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 40px;
+  list-style-type: none;
+}
+
+.random_facts_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random_facts_container ul{
+  color: black;
+  font-weight: normal;
+  margin: 20px;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 40px;
+  list-style-type: none;
+}
+
+.random_facts_container img{
+  height:40vh;
+  margin: 10px;
+  width: auto;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* My skills */
+.text_chart_container{
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+.my_skills_container h1{
+  color: black;
+  font-weight: normal;
+  margin: 10px;
+  padding: 5px;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.my_skills_container  h3{
   color: black;
   font-weight: normal;
   margin: 20px;
@@ -150,8 +216,10 @@ html, body{
 }
 
 .chart-wrap {
-  width: 650px;
-  height: 600px;
+  display: flex;
+  height: 50vh;
+  width: auto;
+  margin: 30px;
 }
 .chart-wrap .title {
   text-align: center;
@@ -166,7 +234,7 @@ html, body{
   background: repeating-linear-gradient(0deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 20%);
 }
 .grid .bar {
-  background-color: #f16335;
+  background-color: #c9ab00c5;
   width: 45px;
   height: var(--bar-value);
   align-self: flex-end;
@@ -208,4 +276,49 @@ html, body{
   position: absolute;
   transform: rotate(0deg);
   line-height: 45px;
+}
+
+
+/* Portfolio */
+.work_container{
+}
+
+.work_container h1{
+  color: black;
+  font-weight: normal;
+  margin: 10px;
+  padding: 5px;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.grid_work { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+  
+.grid_work > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.grid_work > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.text button:hover{
+  background: #ffd900;
+  color: black;
+  cursor: pointer;
 }
