@@ -1,20 +1,142 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Hello World</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <section class="hero_container">
+      <div class="hero_text">
+        <h1>Hi,</h1>
+        <h1>I'm <span class="nameH">Oscar</span>,</h1>
+        <h1> lifelong learner</h1>
+        <h3>Software Engineer Student / SPS Participant</h3>
+      </div>
+    </section>
+    <header class="header_container">
+      <div class="home_logo_container">
+        <img src="./assets/logohome.png" alt="logo_home">
+      </div>
+
+      <div class="section_container">
+        <a href="#about">About</a>
+        <a href="#contact">MySkills</a>
+        <a href="#about">Work</a>
+        <a href="#about">Blog</a>
+        <a href="#about">Contact</a>
+      </div>
+
+      <div class="social_container">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </header>
+
+    <section class="about_me_container">
+      <h1>About me</h1>
+      <p>I'm an ...</p>
+      <div class="part_container">
+        <h1>Part Coder</h1>
+        Front-end development
+        data engineering enthusiast
+        competitive programming participant (I try)
+        Love coffee
+        Bug Hunter
+
+        <h1>Part Student</h1>
+        Data Structures
+        software engineering process
+        Develop soft skills
+        A lot of homework
+        Dont Sleep 
+      </div>
+
+      <div class="random_facts_container">
+        <h1>Random facts about me</h1>
+        <h2>I really enjoy the food</h2>
+        <h2>I love meet new people</h2>
+        <h2>The nature give peace</h2>
+        <h2>I love basketball</h2>
+        <h2>I'm addicted to Instagram</h2>
+      </div>
+    </section>
+
+
+    <section class="my_skills_container">
+      <h1>My Skills</h1>
+      <p>Since beginning...</p>
+      <div class="chart-wrap">
+        <div class="grid verticaal">
+        <div class="bar" style="--bar-value:85%;" data-name="Front-end" title="Your Blog 85%"></div>
+              <div class="bar" style="--bar-value:23%;" data-name="Back-end" title="Medium 23%"></div>
+             <div class="bar" style="--bar-value:7%;" data-name="Data Bases" title="Tumblr 7%"></div>
+              <div class="bar" style="--bar-value:38%;" data-name="JavaScript" title="Facebook 38%"></div>
+              <div class="bar" style="--bar-value:35%;" data-name="Java" title="YouTube 35%"></div>
+              <div class="bar" style="--bar-value:30%;" data-name="C++" title="LinkedIn 30%"></div>
+              <div class="bar" style="--bar-value:5%;" data-name="Python" title="Twitter 5%"></div>
+              <div class="bar" style="--bar-value:20%;" data-name="Algorithms" title="Other 20%"></div>    
+              <div class="bar" style="--bar-value:20%;" data-name="Data Structures" title="Other 20%"></div>    
+        </div>
+      </div>
     </div>
+    </section>
+
+
+
+
+    <section class="work_container">
+      <h1>My Work</h1>
+    </section>
+
+    <section class="blog_container">
+      <h1>My first week in Google as a SPS Participant</h1>
+      <!-- Line -->
+      <h3>By Oscar Fernandez on 26 Feb 2021</h3>
+      <img src="" alt="">
+      <p>Here i have text</p>
+      <button>Read More</button>
+    </section>
+
+    <section class="contact_container">
+      <h1>Contact me</h1>
+      <p>I’m interested in freelance opportunities – especially ambitious or large projects. 
+        However, if you have other request or question, don’t hesitate to use the form.
+      </p>
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <!-- map donw -->
+      <!-- overlay box with this  -->
+    </section>
+
+    <footer>
+      <div class="home_logo_container">
+        <img src="./assets/logohome.png" alt="logo_home">
+      </div>
+
+      <div class="section_container">
+        <a href="#about">About</a>
+        <a href="#contact">MySkills</a>
+        <a href="#about">Work</a>
+        <a href="#about">Blog</a>
+        <a href="#about">Contact</a>
+      </div>
+
+      <div class="social_container">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </footer>
   </body>
 </html>
