@@ -2,6 +2,7 @@
 html, body{
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* Hero */
@@ -85,8 +86,8 @@ html, body{
 
 .about_me_container > .about_me_first_section{ 
   width: fit-content;
+  margin-bottom: 0;
   padding: 10px;
-  box-shadow: 0px 15px 5px -15px rgb(0, 0, 0); 
   height: 50vh;
 }
 
@@ -97,7 +98,6 @@ html, body{
   width: auto;
   float: right;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
 }
 
 .about_me_container > .about_me_first_section > h1{
@@ -128,6 +128,15 @@ html, body{
   line-height: 40px;
 }
 
+.about_me_container > .about_me_first_section > h3 a{
+  color: #444444;
+  outline-style: none;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-bottom: 1px solid #ffd900;
+}
+
+
 .about_me_container > .part_container h1{
   text-align: center;
   color: black;
@@ -156,7 +165,6 @@ html, body{
 .me_as ul{
   color: black;
   font-weight: normal;
-  margin: 20px;
   padding: 5px;
   font-size: 1em;
   font-weight: lighter;
@@ -190,10 +198,17 @@ html, body{
 }
 
 /* My skills */
+.my_skills_container{
+  padding : 20px;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0); 
+}
+
+
 .text_chart_container{
   display: inline;
   align-items: center;
   justify-content: center;
+  
 }
 
 .my_skills_container h1{
@@ -281,6 +296,8 @@ html, body{
 
 /* Portfolio */
 .work_container{
+  padding : 20px;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0);
 }
 
 .work_container h1{
@@ -321,4 +338,78 @@ html, body{
   background: #ffd900;
   color: black;
   cursor: pointer;
+}
+
+/* Blog */
+
+.blog_container{
+  margin-top:5%;
+}
+
+.blog_container h1{
+  color: black;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 3em;
+  font-weight: normal;
+  border-bottom: 1px solid gray;
+}
+
+.blog_container h3{
+  color: rgb(71, 71, 71);
+  font-weight: normal;
+  margin-top: 2px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.blog_container p{
+  color: black;
+  font-weight: normal;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+
+.blog_container img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+/* Contact */
+.contact_container h1{
+  color: black;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.contact_container p{
+  color: black;
+  font-weight: normal;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight:normal;
+}
+
+.contact_container iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }

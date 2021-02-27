@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <section class="hero_container">
+    <section id="home" class="hero_container">
       <div class="hero_text">
         <h1>Hi,</h1>
         <h1>I'm <span class="nameH">Oscar</span>,</h1>
@@ -23,25 +24,25 @@
 
     <header class="header_container">
       <div class="navbar">
-        <a href="#about">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#contact">MySkills</a>
-        <a href="#about">Work</a>
-        <a href="#about">Blog</a>
-        <a href="#about">Contact</a>
+        <a href="#skills">My Skills</a>
+        <a href="#work">Work</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
 
         <div class="social_container">
-          <a href=""><img src="./assets/twitter.png" alt="twitter_logo"></a> 
-          <a href=""><img src="./assets/instagram.png" alt="instagram_logo"></a>
-          <a href=""><img src="./assets/linkedin.png" alt="linkedin_logo"></a>
-          <a href=""><img src="./assets/github.png" alt="gihub_logo"></a>
+          <a href="https://twitter.com/oscarfermor" target="_blank"><img src="./assets/twitter.png" alt="twitter_logo"></a> 
+          <a href="https://www.instagram.com/oscarfm014/" target="_blank"><img src="./assets/instagram.png" alt="instagram_logo"></a>
+          <a href="https://www.linkedin.com/in/oscarfemo/" target="_blank"><img src="./assets/linkedin.png" alt="linkedin_logo"></a>
+          <a href="https://github.com/OscarFM014" target="_blank"><img src="./assets/github.png" alt="gihub_logo"></a>
         </div>
       </div>
 
       
     </header>
 
-    <section class="about_me_container">
+    <section id="about"  class="about_me_container fadeInUp">
       <div class="about_me_first_section">
       <img src="./assets/about.jpeg" alt="">
         <h1>About me</h1>
@@ -49,6 +50,7 @@
         <h3>I have a tremendous passion for data structures, web, algorithms, data engineer and data scients areas.
          I'm a friendly person, I enjoy work in teams, I feel really happy learning from others and helping.
         When I'm not coding or stuying, you'll find me playing basketball, cooking, working out or running.</h3>
+        <h3> <a href="#contact">Let's make something special!</a> </h3>
       </div>
 
       <div class="part_container">
@@ -88,22 +90,23 @@
           <li>I love meet new people</li>
           <li>The nature give peace</li>
           <li>I love basketball</li>
-          <li> I'm addicted to <a href="">Instagram</a> </li>
+          <li> I'm addicted to <a href="https://www.instagram.com/oscarfm014/" target="_blank">Instagram</a> </li>
         </ul>
       </div>
     </section>
 
     
-    <section class="my_skills_container">
+    <section id="skills"  class="my_skills_container">
       <h1>My Skills</h1>
       <div class="text_chart_container">
         <div class= "text">
-          <h3>8 have passed since I started my journey through computer science, 
+          <h3>8 years have passed since I started my journey through computer science, 
             I started with a good basis of programming logic and now I develop functional software. 
             I have done a lot of proyects using: Visual Studio Code,Oracle Apex, 
-            MySQLWorkbench, Firebase, IBM Watson, ReactJs, Bootstrap, Flask, 
+            MySQLWorkbench, Firebase, IBM Watson, ReactJs,AWS, Bootstrap, Flask, 
             Android Studio, Anaconda, Pytorch, Google Colab, Adobe XD.
-            I also have a lot experience with Front-end and Back-end developer.</h3>
+            I also have a lot experience with Front-end and Back-end developer.
+            <a href="./assets/MyResume.pdf" download="PdfOscarFernandez">My resume pdf</a></h3>
         </div>
         <div class="chart-wrap">
           <div class="grid vertical">
@@ -121,7 +124,7 @@
       </div>
     </section>
 
-    <section class="work_container">
+    <section id="work" class="work_container">
       <h1>Portfolio</h1>
       <div class="container">
         <main class="grid_work">
@@ -130,7 +133,7 @@
             <div class="text">
               <h3>Vision</h3>
               <p>AI that detects skin cancer</p>
-              <a href=""><button>Learn More</button></a>
+              <a href="https://github.com/OscarFM014/Vision" target="_blank"><button>Learn More</button></a>
             </div>
           </article>
           <article>
@@ -138,7 +141,7 @@
             <div class="text">
               <h3>Metal Slug Game</h3>
               <p>Game recreate from the original game Metal Slug</p>
-              <a href=""><button>Learn More</button></a>
+              <a href="https://github.com/OscarFM014/MetalSlug" target="_blank"><button>Learn More</button></a>
             </div>
           </article>
           <article>
@@ -146,7 +149,7 @@
             <div class="text">
               <h3>Diversify</h3>
               <p>Page that help to join people by local experiences</p>
-              <a href=""><button>Learn More</button></a>
+              <a href="https://github.com/OscarFM014/Diversify" target="_blank"><button>Learn More</button></a>
             </div>
           </article>
           <article>
@@ -154,55 +157,69 @@
             <div class="text">
               <h3>Google Page</h3>
               <p>Using HTML and CSS I made a copy of Google</p>
-              <a href=""><button>Learn More</button></a>
+              <a href="https://github.com/OscarFM014/GoogleClonePage" target="_blank"><button>Learn More</button></a>
             </div>
           </article>
-          
+          <article>
+            <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F49541620%2F238733775792%2F1%2Foriginal.jpg?auto=compress&s=7330ad11e5f6af8de0aee892daf4432c" alt="Sample photo">
+            <div class="text">
+              <h3>Social Data Challenge 1.0</h3>
+              <p>Model that predict the air pollution in my city using Python and Pandas</p>
+              <a href="https://github.com/OscarFM014/Social_Data_Challenge-Datalab" target="_blank"><button>Learn More</button></a>
+            </div>
+          </article>
+          <article>
+              <img src="assets/esperoverte.png" alt="">
+              <div class="text">
+              <h3>esperoverte.com</h3>
+              <p>An digital invitation for a wedding using AWS, HTML, CSS and JS</p>
+              <a href="https://esperoverte.com/" target="_blank"><button>Learn More</button></a>
+            </div>
+          </article>
+          <article>
+            <img src="https://pbs.twimg.com/media/EhHGCBGXcAAhK1j.jpg" alt="Sample photo">
+            <div class="text">
+              <h3>Social Data Challenge 3.0</h3>
+              <p>Model that predict the number of unemployed during the pandemic using Python in Jupiter Notebooks</p>
+              <a href="https://github.com/OscarFM014/SDC3.0" target="_blank"><button>Learn More</button></a>
+            </div>
+          </article>
+          <article>
+            <img src="https://digitaldefynd.com/wp-content/uploads/2018/07/best-data-structures-and-algorithms-course-tutorials-certification-class-online.jpg" alt="Sample photo">
+            <div class="text">
+              <h3>Data Structures and Algorithms</h3>
+              <p>Coding data structures and algorithms in Python</p>
+              <a href="https://github.com/OscarFM014/DataStructuresAlgorithms" target="_blank"><button>Learn More</button></a>
+            </div>
+          </article>
         </main>
-        
-        
       </div>
     </section>
 
-    <section class="blog_container">
+    <section id="blog" class="blog_container">
       <h1>My first week in Google as a SPS Participant</h1>
       <!-- Line -->
       <h3>By Oscar Fernandez on 26 Feb 2021</h3>
-      <img src="" alt="">
-      <p>Here i have text</p>
-      <button>Read More</button>
+      <img src="https://www.jobalign.com/wp-content/uploads/2018/01/google-logo-png-hd-11.png" alt="Sample photo">
+      <p>My first week here with the SPS team and my project advisor was amazing.
+        My first meeting with the team was fun.
+        I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
+        
+        This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
+        
+        It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
     </section>
 
-    <section class="contact_container">
+   <section id="contact" class="contact_container">
       <h1>Contact me</h1>
-      <p>I’m interested in freelance opportunities – especially ambitious or large projects. 
-        However, if you have other request or question, don’t hesitate to use the form.
+      <p>Feel free to contact me, we can talk about everything! 😃.
+        
       </p>
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <!-- map donw -->
-      <!-- overlay box with this  -->
+      <p>Tel: +52 274 103 17 65</p>
+      <p>Or visit me!</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.023694243099!2d-103.43323968497494!3d20.668615005350883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzA3LjAiTiAxMDPCsDI1JzUxLjgiVw!5e0!3m2!1ses-419!2smx!4v1614392357063!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
-    <footer>
-    
-
-      <div class="section_container">
-        <a href="#about">About</a>
-        <a href="#contact">MySkills</a>
-        <a href="#about">Work</a>
-        <a href="#about">Blog</a>
-        <a href="#about">Contact</a>
-      </div>
-
-      <div class="social_container">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-    </footer>
+   
   </body>
 </html>
