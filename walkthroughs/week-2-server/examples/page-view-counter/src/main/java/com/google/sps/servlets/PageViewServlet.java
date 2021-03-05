@@ -21,12 +21,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet that returns HTML that contains the page view count. */
-@WebServlet("/page-views")
+@WebServlet("/page-views") /* Trigger to know the URL */
 public class PageViewServlet extends HttpServlet {
 
   private int pageViews = 0;
 
   @Override
+  /* Run the GET of the client */
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     pageViews++;
 
