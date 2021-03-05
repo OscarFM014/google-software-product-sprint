@@ -28,8 +28,19 @@ function addRandomGreeting() {
 }
 
 async function showServerTime() {
-  const responseFromServer = await fetch('/date');
-  const textFromResponse = await responseFromServer.text();
-  console.log(textFromResponse);
-  alert(textFromResponse);
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+    console.log(textFromResponse);
+    alert(textFromResponse);
 } 
+
+async function getServerStats() {
+    const responseFromServer = await fetch('/server-stats');
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const words = await responseFromServer.json();
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+
+    console.log(randomWord);
+    alert(randomWord);
+}
