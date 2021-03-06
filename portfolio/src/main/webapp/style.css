@@ -387,6 +387,11 @@ html, body{
 }
 
 /* Contact */
+.contact_container form{
+  text-align: center;
+}
+
+
 .contact_container h1{
   color: black;
   font-weight: normal;
