@@ -14,25 +14,30 @@
 
 package com.google.sps.servlets;
 
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.Date;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
-/** Servlet that returns HTML that contains the page view count. */
-@WebServlet("/page-views") /* Trigger to know the URL */
-public class PageViewServlet extends HttpServlet {
+@WebServlet("/server-stats")
+public final class ServerStatsServlet extends HttpServlet {
 
-  private int pageViews = 0;
+  private final Date startTime = new Date();
 
   @Override
-  /* Run the GET of the client */
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    pageViews++;
-
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Page Views</h1>");
-    response.getWriter().println("<p>This page has been viewed " + pageViews + " times.</p>");
+    
+    // Send the JSON as the response
+    ArrayList<String> arrayListMotivation=new ArrayList<String>();
+    arrayListMotivation.add("Smile!");
+    arrayListMotivation.add("Be Happy!");
+    arrayListMotivation.add("Don't Quit!");
+    String json = new Gson().toJson(arrayListMotivation);
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
   }
 }
