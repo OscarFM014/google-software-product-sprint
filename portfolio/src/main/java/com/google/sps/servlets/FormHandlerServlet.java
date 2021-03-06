@@ -33,6 +33,7 @@ public final class FormHandlerServlet extends HttpServlet {
     // Respond with the result.
     response.setContentType("text/html;");
     response.getWriter().println(text);
+    
   }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
