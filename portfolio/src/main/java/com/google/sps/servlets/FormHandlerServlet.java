@@ -15,8 +15,15 @@ public class FormHandlerServlet extends HttpServlet {
 
     // Get the value entered in the form.
     String nameValue = request.getParameter("name-value");
+    String emailValue = request.getParameter("email-value");
+    String message = request.getParameter("message-value");
+    ArrayList<String> information=new ArrayList<String>();
+    information.add(nameValue);
+    information.add(emailValue);
+    information.add(message);
+    System.out.println(information);
 
-    // Write the value to the response so the user can see it.
+    
     response.getWriter().write(nameValue);
     /* response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/#home"); */
   }
