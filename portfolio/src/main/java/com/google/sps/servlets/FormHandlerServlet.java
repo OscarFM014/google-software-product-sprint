@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
@@ -20,6 +21,6 @@ public class FormHandlerServlet extends HttpServlet {
 
     // Write the value to the response so the user can see it.
     response.getWriter().println("You submitted: " + textValue);
-    response.sendRedirect("https://google.com");
+    response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/#home");
   }
 }
