@@ -33,7 +33,6 @@ public final class FormHandlerServlet extends HttpServlet {
     // Respond with the result.
     response.setContentType("text/html;");
     response.getWriter().println(text);
-    response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com");
   }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
