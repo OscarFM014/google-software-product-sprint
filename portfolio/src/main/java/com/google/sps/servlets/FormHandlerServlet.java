@@ -13,7 +13,10 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
-
+import java.util.Arrays;
+import com.google.gson.Gson;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
@@ -31,15 +34,18 @@ public final class FormHandlerServlet extends HttpServlet {
     String textSubject= getParameter(request, "subject-input", "Hi!");
     String textMensaje = getParameter(request, "mensaje-input", "Hello there!");
     System.out.println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
-    arrayInformation.add(textName);
-    arrayInformation.add(textEmail);
-    arrayInformation.add(textSubject);
-    arrayInformation.add(textMensaje);
-    System.out.println(arrayInformation);
+    arrayInformation.add("Name:"  + textName);
+    arrayInformation.add("Email:"  + textEmail);
+    arrayInformation.add("Subject:"  + textSubject);
+    arrayInformation.add("Massage:"  + textMensaje);
+    String jsonInformation = new Gson().toJson(arrayInformation);
+    /* System.out.println(arrayInformation); */
+    System.out.println(jsonInformation);
     
     // Respond with the result.
-    response.getWriter().println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
-    response.getWriter().println(arrayInformation);
+    /* response.getWriter().println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
+    response.getWriter().println(arrayInformation); */
+    response.getWriter().println(jsonInformation);
     response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/"); 
   }
 
