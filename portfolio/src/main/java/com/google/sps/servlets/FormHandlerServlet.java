@@ -29,11 +29,12 @@ public final class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
     String text = getParameter(request, "mensaje-input", "Hello there!");
+
+    System.out.println(text);
     
     // Respond with the result.
-    response.setContentType("text/html;");
     response.getWriter().println(text);
-    
+    response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/"); 
   }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
