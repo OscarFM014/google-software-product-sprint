@@ -15,12 +15,9 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
-import java.util.Arrays;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /** Servlet that processes text. */
 @WebServlet("/form-handler")
 public final class FormHandlerServlet extends HttpServlet {
@@ -28,12 +25,21 @@ public final class FormHandlerServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
-    String text = getParameter(request, "mensaje-input", "Hello there!");
-
-    System.out.println(text);
+    ArrayList<String> arrayInformation =new ArrayList<String>();
+    String textName = getParameter(request, "mensaje-input", "Hello there!");
+    String textEmail= getParameter(request, "email-input", "example@gmail.com");
+    String textSubject= getParameter(request, "subject-input", "Hi!");
+    String textMensaje = getParameter(request, "mensaje-input", "Hello there!");
+    System.out.println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
+    arrayInformation.add(textName);
+    arrayInformation.add(textEmail);
+    arrayInformation.add(textSubject);
+    arrayInformation.add(textMensaje);
+    System.out.println(arrayInformation);
     
     // Respond with the result.
-    response.getWriter().println(text);
+    response.getWriter().println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
+    response.getWriter().println(arrayInformation);
     response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/"); 
   }
 
