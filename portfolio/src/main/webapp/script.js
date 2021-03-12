@@ -44,3 +44,4 @@ async function getServerStats() {
     console.log(randomWord);
     alert(randomWord);
 }
+
