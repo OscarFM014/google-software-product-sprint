@@ -21,6 +21,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.api.gax.paging.Page;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
 /** Servlet that processes text. */
 @WebServlet("/form-handler")
 public final class FormHandlerServlet extends HttpServlet {
@@ -46,8 +51,22 @@ public final class FormHandlerServlet extends HttpServlet {
     /* response.getWriter().println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
     response.getWriter().println(arrayInformation); */
     response.getWriter().println(jsonInformation);
+    
     response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/"); 
   }
+
+
+  static void authImplicit() {
+  // If you don't specify credentials when constructing the client, the client library will
+  // look for credentials via the environment variable GOOGLE_APPLICATION_CREDENTIALS.
+  Storage storage = StorageOptions.getDefaultInstance().getService();
+
+  System.out.println("Buckets:");
+  Page<Bucket> buckets = storage.list();
+  for (Bucket bucket : buckets.iterateAll()) {
+    System.out.println(bucket.toString());
+  }
+}
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);

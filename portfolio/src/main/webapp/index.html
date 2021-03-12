@@ -43,7 +43,7 @@
       
     </header>
 
-    <section id="about"  class="about_me_container fadeInUp">
+    <section id="about" class="about_me_container fadeInUp">
       <div class="about_me_first_section">
       <img src="./assets/about.jpeg" alt="">
         <h1>About me</h1>
@@ -197,34 +197,29 @@
       </div>
     </section>
 
-    <section id="blog" class="blog_container">
-      <h1>My first week in Google as a SPS Participant</h1>
+    <section id="blog"></section>
+    <section  class="blog_container">
+      <h1 >My first week in Google as a SPS Participant</h1>
       <!-- Line -->
       <h3>By Oscar Fernandez on 26 Feb 2021</h3>
       <img src="https://www.jobalign.com/wp-content/uploads/2018/01/google-logo-png-hd-11.png" alt="Sample photo">
-      <p>My first week here with the SPS team and my project advisor was amazing.
-        My first meeting with the team was fun.
-        I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
-        
-        This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
-        
-        It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
-
-        <h1>My first week in Google as a SPS Participant</h1>
-        <!-- Line -->
-        <h3>By Oscar Fernandez on 26 Feb 2021</h3>
-        <img src="https://www.jobalign.com/wp-content/uploads/2018/01/google-logo-png-hd-11.png" alt="Sample photo">
-        <p>My first week here with the SPS team and my project advisor was amazing.
-          My first meeting with the team was fun.
-          I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
-          
-          This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
-          
-          It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
+      <!--  action="getSentimentalAnalysis();" -->
+        <form method="POST" action="/sentiment">
+            <p >My first week here with the SPS team and my project advisor was amazing.
+                My first meeting with the team was fun.
+                I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
+                This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
+                It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
+            <textarea name="message" hidden>My first week here with the SPS team and my project advisor was amazing. 
+                                My first meeting with the team was fun. I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
+                                This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
+                                It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️ </textarea>
+            <button  onclick="getSentimentalAnalysis();">Know the emotional charge of this text!</button>
+        </form>
     </section>
+   
 
     
-
    <section id="contact" class="contact_container">
     <h1>Contact me</h1>
      <div class="form_container">
