@@ -63,6 +63,7 @@ html, body{
 .navbar a:hover {
   background: #ffd900c5;
   color: black;
+  cursor: pointer;
 }
 
 .social_container{
@@ -134,6 +135,11 @@ html, body{
   font-size: 1.5em;
   text-decoration: none;
   border-bottom: 1px solid #ffd900;
+}
+
+.about_me_container > .about_me_first_section > h3 a:hover{
+  color: #ffee00;
+  cursor: pointer;
 }
 
 
@@ -341,9 +347,10 @@ html, body{
 }
 
 /* Blog */
-
 .blog_container{
   margin-top:5%;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0); 
+ 
 }
 
 .blog_container h1{
@@ -383,42 +390,92 @@ html, body{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  
 }
 
+.blog_container form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.blog_container button{
+     background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+    height: 50px;
+    letter-spacing: 1px;
+}
+
+
+.blog_container button:hover{
+  background: #ffd900;
+  color: black;
+  cursor: pointer;
+}
+
+
 /* Contact */
+.contact_container{
+  display: inline;
+}
+
+.contact_container .form_container{
+  display: block;
+  float: left;
+}
+
 .contact_container form{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .contact_container .boton-submit{
-  background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
-    border-radius: 20px;
     color: black;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: 10px;
     font-family: 'Muli', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     height: 50px;
     letter-spacing: 1px;
-    margin: 10px 0px;
+}
+.contact_container .boton-submit:hover{
+  background: #ffd900;
+  color: black;
+  cursor: pointer;
 }
 
 .contact_container .input{
-    border-left: 0px;
-    border-top: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid black; 
+    width: 80%;
+    border: 2px solid black; 
     font-size: 16px;
     font-family: 'Muli', sans-serif;
     margin-bottom: 20px;
-    padding : 0px 20px;
+    padding:5px;
     outline: none;
     height: 50px;
+}
+
+.contact_container .textareaM{
+    width: 80%;
+    border: 2px solid black; 
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 5px;
+    padding: 5px;
+    outline: none;
+    height: 80px;
+    resize: none;
 }
 
 .contact_container h1{
@@ -434,9 +491,8 @@ html, body{
 .contact_container p{
   color: black;
   font-weight: normal;
-  margin-left: 10%;
-  margin-right: 10%;
   text-align: center;
+  padding-left: 5%;
   font-size: 1.5em;
   font-weight:normal;
 }
@@ -444,6 +500,6 @@ html, body{
 .contact_container iframe{
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
   margin-bottom: 20px;
 }

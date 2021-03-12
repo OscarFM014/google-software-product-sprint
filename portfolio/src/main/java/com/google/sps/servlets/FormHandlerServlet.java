@@ -13,11 +13,12 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
-
-import java.io.IOException;
 import java.util.Arrays;
+import com.google.gson.Gson;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -28,11 +29,26 @@ public final class FormHandlerServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
-    String text = getParameter(request, "mensaje-input", "Hello there!");
+    ArrayList<String> arrayInformation =new ArrayList<String>();
+    String textName = getParameter(request, "mensaje-input", "Hello there!");
+    String textEmail= getParameter(request, "email-input", "example@gmail.com");
+    String textSubject= getParameter(request, "subject-input", "Hi!");
+    String textMensaje = getParameter(request, "mensaje-input", "Hello there!");
+    System.out.println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
+    arrayInformation.add("Name:"  + textName);
+    arrayInformation.add("Email:"  + textEmail);
+    arrayInformation.add("Subject:"  + textSubject);
+    arrayInformation.add("Massage:"  + textMensaje);
+    String jsonInformation = new Gson().toJson(arrayInformation);
+    /* System.out.println(arrayInformation); */
+    System.out.println(jsonInformation);
     
     // Respond with the result.
-    response.setContentType("text/html;");
-    response.getWriter().println(text);
+    /* response.getWriter().println(textName + " " + textEmail + " " + textSubject + " " + textMensaje);
+    response.getWriter().println(arrayInformation); */
+    response.getWriter().println(jsonInformation);
+    
+    response.sendRedirect("https://ofernandez-sps-spring21.uc.r.appspot.com/"); 
   }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {

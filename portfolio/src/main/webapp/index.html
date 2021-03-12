@@ -43,7 +43,7 @@
       
     </header>
 
-    <section id="about"  class="about_me_container fadeInUp">
+    <section id="about" class="about_me_container fadeInUp">
       <div class="about_me_first_section">
       <img src="./assets/about.jpeg" alt="">
         <h1>About me</h1>
@@ -197,33 +197,43 @@
       </div>
     </section>
 
-    <section id="blog" class="blog_container">
-      <h1>My first week in Google as a SPS Participant</h1>
+    <section id="blog"></section>
+    <section  class="blog_container">
+      <h1 >My first week in Google as a SPS Participant</h1>
       <!-- Line -->
       <h3>By Oscar Fernandez on 26 Feb 2021</h3>
       <img src="https://www.jobalign.com/wp-content/uploads/2018/01/google-logo-png-hd-11.png" alt="Sample photo">
-      <p>My first week here with the SPS team and my project advisor was amazing.
-        My first meeting with the team was fun.
-        I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
-        
-        This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
-        
-        It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
+      <!--  action="getSentimentalAnalysis();" -->
+        <form method="POST" action="/sentiment">
+            <p >My first week here with the SPS team and my project advisor was amazing.
+                My first meeting with the team was fun.
+                I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
+                This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
+                It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here ❤️.</p>
+            <textarea name="message" hidden>My first week here with the SPS team and my project advisor was amazing. 
+                                My first meeting with the team was fun. I love the atmosphere of the team, and generally I adore the treatment of the Google team and all who make this possible, they are very compressible and full of that spark that motivates me to do my best.
+                                This week was full of work, I really tried hard to do this project, I even made a sketch before starting my page, I hope you like it.
+                                It's already Friday and the road for this to end seems very far away, I'm sure I'm enjoying it as much as I can, I love being here.</textarea>
+            <button  onclick="getSentimentalAnalysis();">Know the emotional charge of this text!</button>
+        </form>
     </section>
-
-   <section id="contact" class="contact_container">
    
-      <h1>Contact me</h1>
-      
-      <p>Feel free to contact me, we can talk about everything! 😃.
-      </p>
+
+    
+   <section id="contact" class="contact_container">
+    <h1>Contact me</h1>
+     <div class="form_container">
+      <p>Feel free to contact me, we can talk about everything! 😃</p>
       <form action="/form-handler" method="POST">
-        <input class="input" name="mensaje-input" placeholder="Message" /> 
+        <input class="input" name="name-input" placeholder="Name" /> 
+        <input class="input" name="email-input" placeholder="Email" /> 
+        <input class="input" name="subject-input" placeholder="Subject" /> 
+        <textarea class="textareaM" name="mensaje-input" placeholder="Message"></textarea> 
         <input class= "boton-submit" type="submit" />
       </form>
-      <p>Tel: +52 274 103 17 65</p>
+     </div>
       <p>Or visit me!</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.023694243099!2d-103.43323968497494!3d20.668615005350883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzA3LjAiTiAxMDPCsDI1JzUxLjgiVw!5e0!3m2!1ses-419!2smx!4v1614392357063!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.023694243099!2d-103.43323968497494!3d20.668615005350883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzA3LjAiTiAxMDPCsDI1JzUxLjgiVw!5e0!3m2!1ses-419!2smx!4v1614392357063!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </body>
     <script src="script.js"></script>
